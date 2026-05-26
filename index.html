@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Away Raquel Crochet - Catálogo</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Abril+Fatface&family=Alex+Brush&family=Alfa+Slab+One&family=Amatic+SC:wght@700&family=Anton&family=Architects+Daughter&family=Asap:wght@400;700&family=Balsamiq+Sans:wght@700&family=Bangers&family=Bebas+Neue&family=Berkshire+Swash&family=Bitter:wght@400;700&family=Bree+Serif&family=Bungee&family=Cabin:wght@400;700&family=Cairo:wght@400;700&family=Caveat:wght@700&family=Chewy&family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,600;1,400;1,600&family=Courgette&family=Dancing+Script:wght@700&family=Didact+Gothic&family=DM+Serif+Display&family=Domine:wght@700&family=Exo+2:wght@400;700&family=Fjalla+One&family=Fredoka+One&family=Fredoka:wght@400;600&family=Fugaz+One&family=Great+Vibes&family=Inconsolata:wght@400;700&family=Indie+Flower&family=Josefin+Sans:wght@400;700&family=Kaushan+Script&family=Kanit:wght@400;700&family=Lobster&family=Lora:ital,wght@0,400;0,700;1,400&family=Luckiest+Guy&family=Macondo&family=Marck+Script&family=Merriweather:wght@700&family=Montserrat:wght@400;700&family=Nunito:wght@400;700&family=Oswald:wght@500;700&family=Pacifico&family=Parisienne&family=Playfair+Display:ital,wght@0,700;1,400&family=Poiret+One&family=Poppins:wght@400;600&family=Quicksand:wght@500;700&family=Rajdhani:wght@600&family=Righteous&family=Roboto+Condensed:wght@700&family=Rozha+One&family=Russo+One&family=Sacramento&family=Satisfy&family=Shadows+Into+Light&family=Special+Elite&family=Teko:wght@500&family=Titillium+Web:wght@600&family=UnifrakturMaguntia&family=Varela+Round&family=Vidaloka&family=Volkhov&family=VT323&family=Zeyada&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CONFIGURACIÓN VISUAL DINÁMICA MEDIANTE VARIABLES CSS */
+        :root {
+            --header-bg: #e8a79d;
+            --header-text: #ffffff;
+            --body-bg: #faf5f0;
+            --body-text: #4a3b32;
+            --tarjeta-bg: #ffffff;
+            --modal-bg: #ffffff;
+            --accent-color: #b56559;
+            
+            /* Tipografías separadas */
+            --font-titulo: 'Segoe UI', sans-serif;
+            --font-subtitulo: 'Segoe UI', sans-serif;
+            
+            /* Tamaños separados */
+            --size-titulo: 2.6rem;
+            --size-subtitulo: 1.5rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--body-bg);
+            color: var(--body-text);
+            line-height: 1.6;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        /* Header con distribución flexible alineada a la izquierda */
+        header {
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            text-align: left;
+            padding: 2.5rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            transition: background 0.3s;
+        }
+
+        header h1 {
+            font-family: var(--font-titulo);
+            font-size: var(--size-titulo);
+            margin-bottom: 0.5rem;
+            margin-top: 0;
+            transition: font-size 0.2s;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-style: italic;
+            opacity: 0.95;
+            margin: 0;
+        }
+
+        .logo-container {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid white;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            background-color: white;
+            flex-shrink: 0;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .header-textos {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .btn-pedido, .btn-guardar, .btn-add-cat, .btn-cat-accion.btn-add-cat, .btn-canva-dl {
+            background-color: var(--accent-color) !important;
+            color: #ffffff !important;
+        }
+        .btn-pedido:hover, .btn-guardar:hover, .btn-canva-dl:hover { opacity: 0.9; }
+        
+        /* Subtítulos de Categorías vinculados por separado */
+        .categoria-titulo {
+            font-family: var(--font-subtitulo);
+            font-size: var(--size-subtitulo);
+            border-left: 5px solid var(--accent-color);
+            color: var(--body-text);
+            margin-bottom: 1.5rem;
+            padding-left: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: font-size 0.2s;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .intro h2 {
+            font-family: var(--font-subtitulo);
+            font-size: calc(var(--size-subtitulo) * 1.2);
+            color: var(--accent-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .categoria-section {
+            margin-bottom: 4rem;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .tarjeta {
+            background-color: var(--tarjeta-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            border: 1px solid #ebdcd0;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+            position: relative;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .tarjeta-img-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background-color: #fff;
+            overflow: hidden;
+        }
+
+        .tarjeta-img-wrapper {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .tarjeta-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center; /* MODIFICADO PARA RELLENAR Y CENTRAR */
+            flex-shrink: 0;
+        }
+
+        .carrusel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.75);
+            color: #7a433a;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+
+        .carrusel-btn:hover { background-color: white; }
+        .carrusel-prev { left: 10px; }
+        .carrusel-next { right: 10px; }
+
+        .carrusel-indicador {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            z-index: 5;
+        }
+
+        .tarjeta-info {
+            padding: 1.5rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            cursor: pointer;
+        }
+
+        .tarjeta-info h3 {
+            font-family: var(--font-subtitulo);
+            font-size: 1.2rem;
+            color: var(--body-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .tarjeta-info p {
+            font-size: 0.95rem;
+            color: var(--body-text);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            opacity: 0.85;
+        }
+
+        .btn-pedido {
+            display: block;
+            color: white;
+            padding: 0.7rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+
+        /* WORKSPACE DE PERSONALIZACIÓN ESTILO CANVA */
+        .canva-workspace { background: #fdfaf7; border: 2px dashed #ebdcd0; border-radius: 12px; padding: 15px; margin-top: 15px; display: flex; flex-direction: column; gap: 10px; }
+        .canva-canvas { width: 100%; min-height: 140px; background: #ffffff; border: 1px solid #ebdcd0; border-radius: 8px; padding: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .canva-tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; background: #fff; padding: 10px; border-radius: 8px; border: 1px solid #ebdcd0; }
+        .canva-tools input, .canva-tools select { padding: 5px; border-radius: 6px; border: 1px solid #ebdcd0; width: 100%; font-size: 0.85rem; }
+        .btn-canva-dl { width: 100%; padding: 10px; border-radius: 20px; border: none; font-size: 0.9rem; }
+
+        /* ADMINISTRACIÓN */
+        .admin-acciones {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: none;
+            gap: 5px;
+            z-index: 10;
+        }
+
+        .btn-eliminar { background-color: #d9534f; color: white; border: none; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 0.8rem; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+        .btn-eliminar:hover { background-color: #c9302c; }
+        .btn-editar { background-color: #f0ad4e; color: white; border: none; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 0.8rem; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+        .btn-editar:hover { background-color: #ec971f; }
+
+        .admin-panel {
+            display: none;
+            background-color: #f0e4dc;
+            border: 2px dashed #b56559;
+            padding: 2rem;
+            border-radius: 16px;
+            margin-top: 4rem;
+        }
+
+        .admin-panel h2 { color: #7a433a; margin-bottom: 1rem; font-size: 1.5rem; }
+        .admin-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; }
+        @media (max-width: 768px) { .admin-grid { grid-template-columns: 1fr; } }
+        .design-box { background: #fff; padding: 15px; border-radius: 12px; border: 1px solid #ebdcd0; margin-bottom: 20px; }
+
+        .form-group {
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-label-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.3rem;
+        }
+
+        .form-group label { font-weight: bold; font-size: 0.9rem; }
+
+        .btn-label-edit { background: none; border: none; color: #b56559; font-size: 0.8rem; font-weight: bold; cursor: pointer; text-decoration: underline; }
+        .btn-label-edit:hover { color: #7a433a; }
+
+        .form-group input, .form-group textarea, .form-group select {
+            padding: 0.7rem;
+            border: 1px solid #ebdcd0;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+
+        .categoria-select-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .categoria-select-wrapper select { flex-grow: 1; min-width: 200px; }
+        .btn-cat-accion { border: none; border-radius: 8px; padding: 0 12px; font-weight: bold; cursor: pointer; font-size: 0.85rem; color: white; height: 42px; display: flex; align-items: center; justify-content: center; gap: 4px; }
+        .btn-add-cat { background-color: #b56559; }
+        .btn-add-cat:hover { background-color: #8f483d; }
+        .btn-edit-cat { background-color: #f0ad4e; }
+        .btn-edit-cat:hover { background-color: #ec971f; }
+        .btn-del-cat { background-color: #d9534f; }
+        .btn-del-cat:hover { background-color: #c9302c; }
+
+        .btn-guardar { color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: bold; font-size: 1rem; width: 100%; transition: background-color 0.2s; }
+        .btn-cancelar { background-color: #a09086; color: white; border: none; padding: 0.5rem 1rem; border-radius: 20px; cursor: pointer; font-weight: bold; margin-top: 10px; display: none; width: 100%; }
+        
+        /* VENTANA FLOTANTE MODAL */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center; padding: 1rem; overflow-y: auto; }
+        .modal-contenido { background-color: var(--modal-bg); border-radius: 16px; max-width: 950px; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 2rem; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.15); animation: entradaModal 0.3s ease; }
+        @media (max-width: 768px) { .modal-contenido { grid-template-columns: 1fr; padding: 1.5rem; } }
+        
+        .cerrar-modal { position: absolute; top: 15px; right: 20px; font-size: 2rem; color: #7a433a; cursor: pointer; font-weight: bold; line-height: 1; }
+        
+        .modal-imagenes { display: flex; flex-direction: column; gap: 1rem; }
+        .foto-grande-wrapper { width: 100%; height: 500px; border: 1px solid #ebdcd0; border-radius: 12px; overflow: hidden; background: #fff; }
+        .foto-grande-wrapper img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            object-position: center; /* MODIFICADO PARA RELLENAR Y CENTRAR */
+        }
+        .miniaturas-container { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px; }
+        .miniatura { width: 80px; height: 80px; border: 2px solid #ebdcd0; border-radius: 8px; overflow: hidden; cursor: pointer; transition: border-color 0.2s; background: #fff; flex-shrink: 0; }
+        .miniatura:hover, .miniatura.activa { border-color: var(--accent-color); }
+        .miniatura img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            object-position: center; /* MODIFICADO PARA RELLENAR Y CENTRAR */
+        }
+
+        .modal-detalles { display: flex; flex-direction: column; gap: 1rem; }
+        .modal-detalles h2 { font-family: var(--font-titulo); font-size: 1.8rem; border-bottom: 2px solid #faf5f0; padding-bottom: 0.5rem; }
+        .txt-descripcion { color: var(--body-text); font-size: 1rem; margin-bottom: 0.5rem; }
+        
+        .bloque-info { background-color: #faf5f0; padding: 1rem; border-radius: 12px; border: 1px solid #ebdcd0; }
+        .bloque-info h4 { color: #7a433a; font-size: 0.95rem; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.5px; }
+        .bloque-info div { font-size: 0.9rem; color: #5c4e45; white-space: pre-line; }
+
+        footer { background-color: #e0d0c5; color: #5c4e45; text-align: center; padding: 2.5rem 1rem; margin-top: 4rem; font-size: 0.9rem; }
+        @keyframes entradaModal { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Away Raquel Crochet Logo" onerror="this.style.display='none'">
+        </div>
+        <div class="header-textos">
+            <h1>Away Raquel Crochet</h1>
+            <p>100% Hecho a Mano — Cada puntada, un detalle</p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section class="intro">
+            <h2>Catálogo</h2>
+            <p>Diseños personalizados con colores a tu elección. Consulta disponibilidad o solicita tu pedido por WhatsApp.</p>
+        </section>
+
+        <div id="secciones-catalogo-dinamicas"></div>
+
+        <div class="admin-panel">
+            <h2 style="margin-bottom:20px; color:#7a433a">⚙️ Panel de Gestión y Diseño Oculto</h2>
+            
+            <div class="design-box">
+                <h3 style="margin-bottom:15px; color:#7a433a">🎨 Configurar Paleta de Colores, Tipografías y Tamaños</h3>
+                
+                <h4 style="margin: 10px 0; color: #b56559">Ajuste de Colores de Fondo y Textos</h4>
+                <div class="admin-grid" style="margin-bottom: 20px;">
+                    <div class="form-group"><label>Fondo de Encabezado:</label><input type="color" id="cfg-header-bg" onchange="updateDesign()"></div>
+                    <div class="form-group"><label>Texto de Encabezado:</label><input type="color" id="cfg-header-text" onchange="updateDesign()"></div>
+                    <div class="form-group"><label>Fondo de la Página:</label><input type="color" id="cfg-body-bg" onchange="updateDesign()"></div>
+                    <div class="form-group"><label>Color de Letras Global:</label><input type="color" id="cfg-body-text" onchange="updateDesign()"></div>
+                    <div class="form-group"><label>Fondo de Tarjetas:</label><input type="color" id="cfg-tarjeta-bg" onchange="updateDesign()"></div>
+                    <div class="form-group"><label>Fondo de Ficha Flotante (Modal):</label><input type="color" id="cfg-modal-bg" onchange="updateDesign()"></div>
+                    <div class="form-group"><label>Detalles y Botones:</label><input type="color" id="cfg-accent" onchange="updateDesign()"></div>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid #ebdcd0; margin: 15px 0;">
+                
+                <h4 style="margin: 10px 0; color: #b56559">Ajuste Avanzado de Fuentes y Tamaños Separados</h4>
+                <div class="admin-grid">
+                    <div class="form-group">
+                        <label>Tipo de Letra del Título Principal:</label>
+                        <select id="cfg-font-titulo" onchange="updateDesign()">
+                            <option value="'Great Vibes', cursive">Great Vibes</option>
+                            <option value="'Parisienne', cursive">Hello Paris</option>
+                            <option value="'Alex Brush', cursive">Amsterdam Four</option>
+                            <option value="'Cinzel Decorative', serif">Dream Avenue (Tan mon cheri)</option>
+                            <option value="'Montserrat', sans-serif">Marthiya (Fortuna)</option>
+                            <option value="'Playfair Display', serif">Playfair Display Bold</option>
+                            <option value="'DM Serif Display', serif">DM Serif Display</option>
+                            <option value="'Cormorant Garamond', serif">Cormorant Garamond Italic</option>
+                            <option value="'Chewy', cursive">Chewy</option>
+                            <option value="'Anton', sans-serif">Anton</option>
+                            <option value="'Fredoka', sans-serif">Mary Kate (RhymeTH forma)</option>
+                            <option value="'Sacramento', cursive">TT Nooks script</option>
+                            <option value="'Berkshire Swash', cursive">White Star</option>
+                            <option value="'Rozha One', serif">Gagalin</option>
+                            <option value="'UnifrakturMaguntia', cursive">Magneton</option>
+                            
+                            <option value="'Segoe UI', sans-serif">Predeterminada Sistema</option>
+                            <option value="'Abel', sans-serif">Abel</option>
+                            <option value="'Abril Fatface', serif">Abril Fatface</option>
+                            <option value="'Amatic SC', cursive">Amatic SC</option>
+                            <option value="'Asap', sans-serif">Asap Rounded</option>
+                            <option value="'Bebas Neue', sans-serif">Bebas Neue</option>
+                            <option value="'Bitter', serif">Bitter Serif</option>
+                            <option value="'Bree Serif', serif">Bree Serif</option>
+                            <option value="'Cabin', sans-serif">Cabin Soft</option>
+                            <option value="'Cairo', sans-serif">Cairo Bold</option>
+                            <option value="'Caveat', cursive">Caveat Hand</option>
+                            <option value="'Comfortaa', sans-serif">Comfortaa Circle</option>
+                            <option value="'Dancing Script', cursive">Dancing Script</option>
+                            <option value="'Didact Gothic', sans-serif">Didact Gothic</option>
+                            <option value="'Domine', serif">Domine Editorial</option>
+                            <option value="'Exo 2', sans-serif">Exo 2</option>
+                            <option value="'Fjalla One', sans-serif">Fjalla One</option>
+                            <option value="'Fredoka One', cursive">Fredoka One</option>
+                            <option value="'Inconsolata', monospace">Inconsolata</option>
+                            <option value="'Josefin Sans', sans-serif">Josefin Sans</option>
+                            <option value="'Kanit', sans-serif">Kanit Bold</option>
+                            <option value="'Lobster', cursive">Lobster</option>
+                            <option value="'Lora', serif">Lora Editorial</option>
+                            <option value="'Macondo', cursive">Macondo Art</option>
+                            <option value="'Marck Script', cursive">Marck Script</option>
+                            <option value="'Merriweather', serif">Merriweather</option>
+                            <option value="'Nunito', sans-serif">Nunito Round</option>
+                            <option value="'Oswald', sans-serif">Oswald Urban</option>
+                            <option value="'Pacifico', cursive">Pacifico Cursiva</option>
+                            <option value="'Poiret One', sans-serif">Poiret One Luxe</option>
+                            <option value="'Poppins', sans-serif">Poppins Geometric</option>
+                            <option value="'Quicksand', sans-serif">Quicksand Soft</option>
+                            <option value="'Rajdhani', sans-serif">Rajdhani Tech</option>
+                            <option value="'Righteous', cursive">Righteous Retro</option>
+                            <option value="'Roboto Condensed', sans-serif">Roboto Condensed</option>
+                            <option value="'Satisfy', cursive">Satisfy Hand</option>
+                            <option value="'Shadows Into Light', cursive">Shadows Into Light</option>
+                            <option value="'Teko', sans-serif">Teko Monumental</option>
+                            <option value="'Varela Round', sans-serif">Varela Round</option>
+                            <option value="'Zeyada', cursive">Zeyada Pluma</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Tamaño del Título Principal:</label>
+                        <div style="display:flex; gap:10px; align-items:center">
+                            <input type="range" id="cfg-size-titulo" min="1.5" max="4.5" step="0.1" oninput="updateDesign()" style="flex-grow:1">
+                            <span id="val-size-titulo">2.6rem</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Tipo de Letra de los Subtítulos:</label>
+                        <select id="cfg-font-subtitulo" onchange="updateDesign()">
+                            <option value="'Segoe UI', sans-serif">Predeterminada Sistema</option>
+                            <option value="'Playfair Display', serif">Playfair Display Bold</option>
+                            <option value="'DM Serif Display', serif">DM Serif Display</option>
+                            <option value="'Cormorant Garamond', serif">Cormorant Garamond Italic</option>
+                            <option value="'Great Vibes', cursive">Great Vibes (Brittany Signature)</option>
+                            <option value="'Parisienne', cursive">Hello Paris</option>
+                            <option value="'Alex Brush', cursive">Amsterdam Four</option>
+                            <option value="'Cinzel Decorative', serif">Dream Avenue</option>
+                            <option value="'Montserrat', sans-serif">Marthiya</option>
+                            <option value="'Chewy', cursive">Chewy</option>
+                            <option value="'Anton', sans-serif">Anton</option>
+                            <option value="'Fredoka', sans-serif">Mary Kate</option>
+                            <option value="'Sacramento', cursive">TT Nooks Script</option>
+                            <option value="'Berkshire Swash', cursive">White Star</option>
+                            <option value="'Rozha One', serif">Gagalin</option>
+                            <option value="'UnifrakturMaguntia', cursive">Magneton</option>
+                            
+                            <option value="'Abel', sans-serif">Abel</option>
+                            <option value="'Abril Fatface', serif">Abril Fatface</option>
+                            <option value="'Amatic SC', cursive">Amatic SC</option>
+                            <option value="'Asap', sans-serif">Asap Rounded</option>
+                            <option value="'Bebas Neue', sans-serif">Bebas Neue</option>
+                            <option value="'Bitter', serif">Bitter Serif</option>
+                            <option value="'Bree Serif', serif">Bree Serif</option>
+                            <option value="'Cabin', sans-serif">Cabin Soft</option>
+                            <option value="'Cairo', sans-serif">Cairo Bold</option>
+                            <option value="'Caveat', cursive">Caveat</option>
+                            <option value="'Comfortaa', sans-serif">Comfortaa Circle</option>
+                            <option value="'Dancing Script', cursive">Dancing Script</option>
+                            <option value="'Didact Gothic', sans-serif">Didact Gothic</option>
+                            <option value="'Domine', serif">Domine Letter</option>
+                            <option value="'Exo 2', sans-serif">Exo 2 Tech</option>
+                            <option value="'Fjalla One', sans-serif">Fjalla One</option>
+                            <option value="'Fredoka One', cursive">Fredoka One</option>
+                            <option value="'Inconsolata', monospace">Inconsolata Mono</option>
+                            <option value="'Josefin Sans', sans-serif">Josefin Sans</option>
+                            <option value="'Kanit', sans-serif">Kanit Neón</option>
+                            <option value="'Lobster', cursive">Lobster Script</option>
+                            <option value="'Lora', serif">Lora Editorial</option>
+                            <option value="'Macondo', cursive">Macondo Art</option>
+                            <option value="'Marck Script', cursive">Marck Script</option>
+                            <option value="'Merriweather', serif">Merriweather</option>
+                            <option value="'Nunito', sans-serif">Nunito Round</option>
+                            <option value="'Oswald', sans-serif">Oswald Sans</option>
+                            <option value="'Pacifico', cursive">Pacifico Cursiva</option>
+                            <option value="'Poiret One', sans-serif">Poiret One Luxe</option>
+                            <option value="'Poppins', sans-serif">Poppins Premium</option>
+                            <option value="'Quicksand', sans-serif">Quicksand Soft</option>
+                            <option value="'Rajdhani', sans-serif">Rajdhani Block</option>
+                            <option value="'Righteous', cursive">Righteous Retro</option>
+                            <option value="'Roboto Condensed', sans-serif">Roboto Condensed</option>
+                            <option value="'Sacramento', cursive">Sacramento Trazo Fino</option>
+                            <option value="'Satisfy', cursive">Satisfy Cursiva</option>
+                            <option value="'Shadows Into Light', cursive">Shadows Into Light</option>
+                            <option value="'Teko', sans-serif">Teko Monumental</option>
+                            <option value="'Varela Round', sans-serif">Varela Round</option>
+                            <option value="'Zeyada', cursive">Zeyada Pluma</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Tamaño de los Subtítulos:</label>
+                        <div style="display:flex; gap:10px; align-items:center">
+                            <input type="range" id="cfg-size-subtitulo" min="1.0" max="3.0" step="0.1" oninput="updateDesign()" style="flex-grow:1">
+                            <span id="val-size-subtitulo">1.5rem</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="design-box">
+                <h3 style="margin-bottom:15px; color:#7a433a; display:flex; align-items:center; gap:5px">🎨 Canva Studio — Impresión de Tarjetas de Dedicatoria</h3>
+                <div class="admin-grid">
+                    <div style="grid-column: 1 / -1; margin-bottom: 10px;">
+                        <div class="canva-canvas" id="canva-live-preview">
+                            <h3 id="canva-text-title" style="font-size:1.4rem; color:#b56559; margin-bottom:5px">Para: Alguien Especial</h3>
+                            <p id="canva-text-body" style="font-size:0.9rem; color:#5c4e45">¡Con mucho amor en esta puntada!</p>
+                            <small style="margin-top:15px; font-size:0.65rem; opacity:0.6;">Away Raquel Crochet</small>
+                        </div>
+                    </div>
+                    <div><label style="font-size:0.85rem; font-weight:bold;">Texto Principal:</label><input type="text" id="canva-in-title" value="Para: Alguien Especial" oninput="drawCanva()" style="width:100%; padding:6px; border:1px solid #ebdcd0; border-radius:6px;"></div>
+                    <div><label style="font-size:0.85rem; font-weight:bold;">Dedicatoria:</label><input type="text" id="canva-in-body" value="¡Con mucho amor en esta puntada!" oninput="drawCanva()" style="width:100%; padding:6px; border:1px solid #ebdcd0; border-radius:6px;"></div>
+                    <div><label style="font-size:0.85rem; font-weight:bold;">Letra Canva:</label>
+                        <select id="canva-font-select" onchange="drawCanva()" style="width:100%; padding:6px; border:1px solid #ebdcd0; border-radius:6px;">
+                            <option value="'Great Vibes', cursive">Great Vibes</option>
+                            <option value="'Parisienne', cursive">Hello Paris</option>
+                            <option value="'Alex Brush', cursive">Amsterdam Four</option>
+                            <option value="'Cinzel Decorative', serif">Dream Avenue</option>
+                            <option value="'Montserrat', sans-serif">Marthiya</option>
+                            <option value="'Chewy', cursive">Chewy</option>
+                            <option value="'Anton', sans-serif">Anton</option>
+                            <option value="'Fredoka', sans-serif">Mary Kate</option>
+                            <option value="'Sacramento', cursive">TT Nooks</option>
+                        </select>
+                    </div>
+                    <div><label style="font-size:0.85rem; font-weight:bold;">Color Texto:</label><input type="color" id="canva-color-text" value="#b56559" onchange="drawCanva()" style="width:100%; height:35px; border:1px solid #ebdcd0; border-radius:6px;"></div>
+                    <div><label style="font-size:0.85rem; font-weight:bold;">Fondo Tarjeta:</label><input type="color" id="canva-color-bg" value="#ffffff" onchange="drawCanva()" style="width:100%; height:35px; border:1px solid #ebdcd0; border-radius:6px;"></div>
+                    <div><label style="font-size:0.85rem; font-weight:bold;">Tamaño Letra:</label><input type="range" id="canva-size-slider" min="12" max="28" value="18" oninput="drawCanva()" style="width:100%;"></div>
+                    <div style="grid-column: 1 / -1; margin-top: 5px;">
+                        <button type="button" class="btn-canva-dl" onclick="descargarEtiquetaCanva()">📥 Descargar Tarjeta Dedicatoria</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="design-box">
+                <h3 style="margin-bottom:15px; color:#7a433a">📦 Publicar Nuevos Productos</h3>
+                <form id="form-producto">
+                    <input type="hidden" id="editando-id" value="">
+                    
+                    <div class="form-group">
+                        <label for="categoria">Categoría del Producto:</label>
+                        <div class="categoria-select-wrapper">
+                            <select id="categoria" required></select>
+                            <button type="button" class="btn-cat-accion btn-add-cat" onclick="crearNuevaCategoria()">➕ Nueva</button>
+                            <button type="button" class="btn-cat-accion btn-edit-cat" onclick="editarCategoriaSeleccionated()">✏️ Renombrar</button>
+                            <button type="button" class="btn-cat-accion btn-del-cat" onclick="eliminarCategoriaSeleccionated()">🗑️ Eliminar</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="titulo">Nombre/Título del Producto:</label>
+                        <input type="text" id="titulo" placeholder="Ej: Carterita Cupcake" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imagenFile">Seleccionar Imagen(es) desde tu PC (Soporta varias):</label>
+                        <input type="file" id="imagenFile" accept="image/*" multiple>
+                        <p id="editando-aviso-img" style="font-size: 0.8rem; color: #b56559; margin-top: 3px; display: none;">(Opcional: Selecciona fotos nuevas solo si deseas cambiar por completo las fotos actuales)</p>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-label-container">
+                            <label for="descripcion" id="lbl-desc">Descripción Comercial del Producto:</label>
+                            <button type="button" class="btn-label-edit" onclick="modificarEnunciado('desc')">✏️ Editar Título</button>
+                        </div>
+                        <textarea id="descripcion" rows="3" placeholder="Detalles estéticos, uso sugerido, etc." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-label-container">
+                            <label for="materiales" id="lbl-mat">Materiales Usados (Relleno, hilos, etc.):</label>
+                            <button type="button" class="btn-label-edit" onclick="modificarEnunciado('mat')">✏️ Editar Título</button>
+                        </div>
+                        <textarea id="materiales" rows="3" placeholder="Ej: Confeccionado con hilos seleccionados suaves de gran resistencia y relleno de napa siliconada hipoalergénica."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-label-container">
+                            <label for="cuidados" id="lbl-cui">Cuidados y Mantenimiento de la Prenda:</label>
+                            <button type="button" class="btn-label-edit" onclick="modificarEnunciado('cui')">✏️ Editar Título</button>
+                        </div>
+                        <textarea id="cuidados" rows="3" placeholder="Ej: Lavar a mano con agua fría y jabón neutro. Secar tendido horizontal a la sombra."></textarea>
+                    </div>
+                    <button type="submit" id="btn-submit-form" class="btn-guardar">Publicar Producto</button>
+                    <button type="button" id="btn-cancelar-edit" class="btn-cancelar" onclick="cancelarEdicion()">Cancelar Edición</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="vista-producto-modal" class="modal" onclick="cerrarModalAfuera(event)">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarDetalle()">&times;</span>
+            
+            <div class="modal-imagenes">
+                <div class="foto-grande-wrapper">
+                    <img id="modal-foto-principal" src="" alt="">
+                </div>
+                <div class="miniaturas-container" id="modal-miniaturas"></div>
+            </div>
+            
+            <div class="modal-detalles">
+                <h2 id="modal-titulo">Nombre del Producto</h2>
+                <p class="txt-descripcion" id="modal-descripcion">Descripción...</p>
+                
+                <div class="bloque-info" style="margin-bottom: 0.5rem;">
+                    <h4 id="modal-lbl-mat">Características y Materiales:</h4>
+                    <div id="modal-materiales">Cargando materiales...</div>
+                </div>
+
+                <div class="bloque-info">
+                    <h4 id="modal-lbl-cui">Cuidados y Mantenimiento:</h4>
+                    <div id="modal-cuidados">Cargando cuidados...</div>
+                </div>
+                
+                <a href="" id="modal-btn-whatsapp" class="btn-pedido" target="_blank" style="margin-top: auto; text-align: center;">Consultar por WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Away Raquel Crochet — Hecho con amor. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const WHATSAPP_NUMERO = "51921576610";
+
+        // MANTENIDO AL 100%: Tus 12 productos base de fábrica iniciales intactos con sus textos y fotos correspondientes
+        const categoriasBaseIniciales = [
+            { id: "carteritas", titulo: "Carteritas y Bolsos" },
+            { id: "llaveros", titulo: "Llaveros Personalizados" },
+            { id: "peluches", titulo: "Peluches y Decoración" }
+        ];
+
+        const productosBaseIniciales = [
+            { id: "b1", categoria: "carteritas", titulo: "Carterita Cupcake / Pastelito", imagenes: ["image_73318a.jpg", "image_73316e.jpg"], descripcion: "Hermoso bolso tipo morral ajustable. Decorado con delicadas mostacillas que simulan chispas de colores y una base texturizada." },
+            { id: "b2", categoria: "carteritas", titulo: "Carterita de Gatito", imagenes: ["image_7331aa.jpg"], descripcion: "Diseño divertido en color marrón con detalles de patitas rosadas y asa larga tejida. ¡Colores totalmente personalizables!" },
+            { id: "b3", categoria: "llaveros", titulo: "Llaveros de Tulipán (Ramillete)", imagenes: ["image_7335c4.jpg", "image_7331ce.jpg", "image_7331eb.jpg", "image_7331c9.jpg"], descripcion: "Dale vida a tus carteras y mochilas con estos hermosos llaveritos de tulipán en variados y alegres colores." },
+            { id: "b4", categoria: "llaveros", titulo: "Llaveros de Mariposa", imagenes: ["image_73360b.jpg", "image_733550.jpg", "image_7331ae.jpg", "image_733569.jpg", "image_73356e.jpg"], descripcion: "Detalladas mariposas tejidas en hermosos hilos con flores colgantes tipo campánula acopladas." },
+            { id: "b5", categoria: "llaveros", titulo: "Llaverito Personalizado J.M", imagenes: ["image_7335ca.jpg", "image_7387e1.jpg"], descripcion: "Llavero amigurumi personalizado con uniforme azul, iniciales tejidas en el pecho y un tierno detalle de mascarilla." },
+            { id: "b6", categoria: "llaveros", titulo: "Llaveros de Capullo de Flor", imagenes: ["image_7335a5.jpg"], descripcion: "Delicados capullos morados sobre base verde. Un accesorio artesanal sutil y elegante para tus llaves o bolsos." },
+            { id: "b7", categoria: "llaveros", titulo: "Separador de Libros / Marcapáginas de Flor", imagenes: ["image_7387c4.jpg"], descripcion: "Acompaña tus lecturas con este lindo separador tejido a mano con diseño floral. El regalo perfecto para los amantes de los libros." },
+            { id: "b8", categoria: "peluches", titulo: "Muñeca Premium con Trenzas", imagenes: ["image_73352f.jpg", "image_73312c.jpg", "image_73320c.jpg"], descripcion: "Muñeca de colección finamente detallada con sombrero floral rosa, vestido combinado y trenzas texturizadas." },
+            { id: "b9", categoria: "peluches", titulo: "Muñequita Mini Flor", imagenes: ["image_733205.jpg"], descripcion: "Tierna muñequita de colección compacta con un vestido rosa clásico y detalle de flor con perla en el pecho." },
+            { id: "b10", categoria: "peluches", titulo: "Osita Amigurumi con Vestido", imagenes: ["image_73318f.jpg", "image_73325.jpg"], descripcion: "Clásica osita de peluche tejida a mano con detalles expresivos y un hermoso vestido acampanado rosa y blanco." },
+            { id: "b11", categoria: "peluches", titulo: "Mini Planta tejida de Girasoles", imagenes: ["image_7335aa.jpg", "image_733588.jpg", "image_73365.jpg"], descripcion: "Mini planta tejida de girasoles, ideal para adornar escritorios o regalar un detalle especial que nunca se marchita." },
+            { id: "b12", categoria: "peluches", titulo: "Mini Fantasmita Halloween", imagenes: ["image_733549.jpg", "image_73322.jpg"], descripcion: "Pequeño y adorable amigurumi de fantasma con un sombrerito naranja de bruja en contraste. ¡Súper tierno!" }
+        ];
+
+        const materialesPorDefecto = "Confeccionado con hilos seleccionados suaves y de gran resistencia.\nRelleno de napa siliconada hipoalergénica que mantiene la forma esponjosa.\nDiseño 100% Artesanal: Elaborado puntada a puntada.";
+        const cuidadosPorDefecto = "Lavado: Lavar a mano con agua fría y jabón neutro suave.\nSecado: Secar al aire libre en sombra (evitar exposición directa al sol fuerte).";
+
+        // LOCALSTORAGE COMPATIBLE DE CONFIGURACIÓN DE DISEÑO AVANZADO SEPARADO
+        let designSettings = JSON.parse(localStorage.getItem('crochet_design_settings_v3')) || {
+            headerBg: "#e8a79d",
+            headerText: "#ffffff",
+            bodyBg: "#faf5f0",
+            bodyText: "#4a3b32",
+            tarjetaBg: "#ffffff",
+            modalBg: "#ffffff",
+            accent: "#b56559",
+            fontTitulo: "'Segoe UI', sans-serif",
+            fontSubtitulo: "'Segoe UI', sans-serif",
+            sizeTitulo: "2.6rem",
+            sizeSubtitulo: "1.5rem"
+        };
+
+        let categoriasModificadasBase = JSON.parse(localStorage.getItem('categorias_modificadas_base')) || null;
+        let categoriasEliminadasBase = JSON.parse(localStorage.getItem('categorias_eliminadas_base')) || [];
+        let categoriasUsuario = JSON.parse(localStorage.getItem('categorias_crochet')) || [];
+        
+        let enunciadosPersonalizados = JSON.parse(localStorage.getItem('enunciados_crochet')) || {
+            desc: "Descripción Comercial del Producto:",
+            mat: "Materiales Usados (Relleno, hilos, etc.):",
+            cui: "Cuidados y Mantenimiento de la Prenda:"
+        };
+
+        let eliminadosBase = JSON.parse(localStorage.getItem('productos_eliminados_base')) || [];
+        let productosUsuario = JSON.parse(localStorage.getItem('productos_crochet')) || [];
+        let modificadosBase = JSON.parse(localStorage.getItem('productos_modificados_base')) || [];
+        
+        let modoAdminActive = false;
+        let panelAdminVisible = false;
+
+        function loadDesignInputs() {
+            document.getElementById('cfg-header-bg').value = designSettings.headerBg;
+            document.getElementById('cfg-header-text').value = designSettings.headerText;
+            document.getElementById('cfg-body-bg').value = designSettings.bodyBg || "#faf5f0";
+            document.getElementById('cfg-body-text').value = designSettings.bodyText || "#4a3b32";
+            document.getElementById('cfg-tarjeta-bg').value = designSettings.tarjetaBg || "#ffffff";
+            document.getElementById('cfg-modal-bg').value = designSettings.modalBg || "#ffffff";
+            document.getElementById('cfg-accent').value = designSettings.accent;
+            
+            document.getElementById('cfg-font-titulo').value = designSettings.fontTitulo;
+            document.getElementById('cfg-font-subtitulo').value = designSettings.fontSubtitulo || "'Segoe UI', sans-serif";
+            
+            document.getElementById('cfg-size-titulo').value = parseFloat(designSettings.sizeTitulo) || 2.6;
+            document.getElementById('cfg-size-subtitulo').value = parseFloat(designSettings.sizeSubtitulo) || 1.5;
+            
+            applyDesign();
+        }
+
+        function updateDesign() {
+            const sizeT = document.getElementById('cfg-size-titulo').value;
+            const sizeS = document.getElementById('cfg-size-subtitulo').value;
+            
+            document.getElementById('val-size-titulo').innerText = sizeT + "rem";
+            document.getElementById('val-size-subtitulo').innerText = sizeS + "rem";
+
+            designSettings = {
+                headerBg: document.getElementById('cfg-header-bg').value,
+                headerText: document.getElementById('cfg-header-text').value,
+                bodyBg: document.getElementById('cfg-body-bg').value,
+                bodyText: document.getElementById('cfg-body-text').value,
+                tarjetaBg: document.getElementById('cfg-tarjeta-bg').value,
+                modalBg: document.getElementById('cfg-modal-bg').value,
+                accent: document.getElementById('cfg-accent').value,
+                fontTitulo: document.getElementById('cfg-font-titulo').value,
+                fontSubtitulo: document.getElementById('cfg-font-subtitulo').value,
+                sizeTitulo: sizeT + "rem",
+                sizeSubtitulo: sizeS + "rem"
+            };
+            localStorage.setItem('crochet_design_settings_v3', JSON.stringify(designSettings));
+            applyDesign();
+        }
+
+        function applyDesign() {
+            const root = document.documentElement;
+            root.style.setProperty('--header-bg', designSettings.headerBg);
+            root.style.setProperty('--header-text', designSettings.headerText);
+            root.style.setProperty('--body-bg', designSettings.bodyBg || "#faf5f0");
+            root.style.setProperty('--body-text', designSettings.bodyText || "#4a3b32");
+            root.style.setProperty('--tarjeta-bg', designSettings.tarjetaBg || "#ffffff");
+            root.style.setProperty('--modal-bg', designSettings.modalBg || "#ffffff");
+            root.style.setProperty('--accent-color', designSettings.accent);
+            root.style.setProperty('--font-titulo', designSettings.fontTitulo);
+            root.style.setProperty('--font-subtitulo', designSettings.fontSubtitulo || "'Segoe UI', sans-serif");
+            root.style.setProperty('--size-titulo', designSettings.sizeTitulo);
+            root.style.setProperty('--size-subtitulo', designSettings.sizeSubtitulo);
+        }
+
+        // LÓGICA DE DIBUJO ETIQUETAS CANVA STUDIO
+        function drawCanva() {
+            const preview = document.getElementById('canva-live-preview');
+            const titleText = document.getElementById('canva-in-title').value;
+            const bodyText = document.getElementById('canva-in-body').value;
+            const fontSelected = document.getElementById('canva-font-select').value;
+            const textColor = document.getElementById('canva-color-text').value;
+            const bgColor = document.getElementById('canva-color-bg').value;
+            const fontSize = document.getElementById('canva-size-slider').value;
+
+            preview.style.backgroundColor = bgColor;
+            
+            const titleEl = document.getElementById('canva-text-title');
+            const bodyEl = document.getElementById('canva-text-body');
+            
+            titleEl.innerText = titleText;
+            titleEl.style.fontFamily = fontSelected;
+            titleEl.style.color = textColor;
+            titleEl.style.fontSize = (fontSize * 1.3) + "px";
+
+            bodyEl.innerText = bodyText;
+            bodyEl.style.fontFamily = fontSelected;
+            bodyEl.style.color = textColor;
+            bodyEl.style.fontSize = fontSize + "px";
+        }
+
+        function descargarEtiquetaCanva() {
+            const canvas = document.createElement('canvas');
+            canvas.width = 600; canvas.height = 400;
+            const ctx = canvas.getContext('2d');
+
+            const bgColor = document.getElementById('canva-color-bg').value;
+            const textColor = document.getElementById('canva-color-text').value;
+            const titleText = document.getElementById('canva-in-title').value;
+            const bodyText = document.getElementById('canva-in-body').value;
+            const fontRaw = document.getElementById('canva-font-select').value.split("'")[1];
+
+            ctx.fillStyle = bgColor; ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.strokeStyle = textColor; ctx.lineWidth = 4; ctx.strokeRect(20, 20, canvas.width - 40, canvas.height - 40);
+
+            ctx.fillStyle = textColor; ctx.textAlign = "center";
+            ctx.font = `bold 36px ${fontRaw}, sans-serif`; ctx.fillText(titleText, 300, 150);
+            ctx.font = `24px ${fontRaw}, sans-serif`; ctx.fillText(bodyText, 300, 230);
+            ctx.font = "italic 16px 'Segoe UI', sans-serif"; ctx.fillText("Away Raquel Crochet", 300, 350);
+
+            const link = document.createElement('a');
+            link.download = `Etiqueta_Canva_${Date.now()}.png`;
+            link.href = canvas.toDataURL(); link.click();
+        }
+
+        function obtenerCategorias() {
+            let activasBase = javaScriptCategoriasModificadasBase =  categoriasModificadasBase ? categoriasModificadasBase : categoriasBaseIniciales;
+            activasBase = activasBase.filter(c => !categoriasEliminadasBase.includes(c.id));
+            return [...activasBase, ...categoriasUsuario];
+        }
+
+        function obtenerListaCompleta() {
+            const baseProcesada = productosBaseIniciales.map(pBase => {
+                const modificacion = modificadosBase.find(m => m.id === pBase.id);
+                return modificacion ? { ...pBase, ...modificacion } : pBase;
+            });
+            return baseProcesada.filter(p => !eliminadosBase.includes(p.id)).concat(productosUsuario);
+        }
+
+        function inicializarEstructuraSecciones() {
+            const contenedorSecciones = document.getElementById('secciones-catalogo-dinamicas');
+            const selectCategoria = document.getElementById('categoria');
+            const catSeleccionadaAnteriormente = selectCategoria ? selectCategoria.value : null;
+
+            contenedorSecciones.innerHTML = '';
+            selectCategoria.innerHTML = '';
+
+            const todasLasCategorias = obtenerCategorias();
+            const productosTotales = obtenerListaCompleta();
+            const algunaHuérfana = productosTotales.some(p => !todasLasCategorias.some(c => c.id === p.categoria));
+            
+            if (algunaHuérfana) {
+                todasLasCategorias.push({ id: "sin_categoria", titulo: "Otros Diseños" });
+            }
+
+            todasLasCategorias.forEach(cat => {
+                const section = document.createElement('section');
+                section.className = 'categoria-section';
+                section.id = `section-container-${cat.id}`;
+                section.innerHTML = `
+                    <h2 class="categoria-titulo">${cat.titulo}</h2>
+                    <div class="galeria" id="galeria-${cat.id}"></div>
+                `;
+                contenedorSecciones.appendChild(section);
+
+                if (cat.id !== "sin_categoria") {
+                    const option = document.createElement('option');
+                    option.value = cat.id;
+                    option.innerText = cat.titulo;
+                    selectCategoria.appendChild(option);
+                }
+            });
+
+            if (catSeleccionadaAnteriormente && document.querySelector(`#categoria option[value="${catSeleccionadaAnteriormente}"]`)) {
+                selectCategoria.value = catSeleccionadaAnteriormente;
+            }
+            actualizarNombresEnunciados();
+        }
+
+        function actualizarNombresEnunciados() {
+            document.getElementById('lbl-desc').innerText = enunciadosPersonalizados.desc;
+            document.getElementById('lbl-mat').innerText = enunciadosPersonalizados.mat;
+            document.getElementById('lbl-cui').innerText = enunciadosPersonalizados.cui;
+        }
+
+        function modificarEnunciado(tipo) {
+            const nuevoTitulo = prompt("Introduce el nuevo enunciado o título para este apartado:", enunciadosPersonalizados[tipo]);
+            if (!nuevoTitulo || nuevoTitulo.trim() === "") return;
+
+            enunciadosPersonalizados[tipo] = nuevoTitulo.trim();
+            localStorage.setItem('enunciados_crochet', JSON.stringify(enunciadosPersonalizados));
+            actualizarNombresEnunciados();
+            alert("Título del apartado actualizado con éxito.");
+        }
+
+        function renderizarCatalogo() {
+            inicializarEstructuraSecciones();
+            const todosLosProductos = obtenerListaCompleta();
+            const todasLasCategorias = obtenerCategorias();
+
+            todosLosProductos.forEach(prod => {
+                let catDestino = prod.categoria;
+                if (!todasLasCategorias.some(c => c.id === catDestino)) {
+                    catDestino = "sin_categoria";
+                }
+
+                const galeriaContenedor = document.getElementById(`galeria-${catDestino}`);
+                
+                if (galeriaContenedor) {
+                    const article = document.createElement('article');
+                    article.className = 'tarjeta';
+
+                    let imagenesHTML = '';
+                    prod.imagenes.forEach(imgUrl => {
+                        imagenesHTML += `<img src="${imgUrl}" onerror="this.src='https://placehold.co/300x300?text=Imagen+No+Encontrada'">`;
+                    });
+
+                    const tieneMultiplesFotos = prod.imagenes.length > 1;
+                    const flechasHTML = tieneMultiplesFotos ? `
+                        <button type="button" class="carrusel-btn carrusel-prev" onclick="moverCarrusel(this, -1, event)">‹</button>
+                        <button type="button" class="carrusel-btn carrusel-next" onclick="moverCarrusel(this, 1, event)">›</button>
+                        <div class="carrusel-indicador">1 / ${prod.imagenes.length}</div>
+                    ` : '';
+
+                    article.innerHTML = `
+                        <div class="admin-acciones" style="display:${modoAdminActive ? 'flex' : 'none'}">
+                            <button type="button" class="btn-editar" onclick="prepararEdicion('${prod.id}', event)">✏️ Editar</button>
+                            <button type="button" class="btn-eliminar" onclick="eliminarProducto('${prod.id}', event)">❌ Eliminar</button>
+                        </div>
+                        <div class="tarjeta-img-container" data-index="0" data-total="${prod.imagenes.length}">
+                            <div class="tarjeta-img-wrapper">
+                                ${imagenesHTML}
+                            </div>
+                            ${flechasHTML}
+                        </div>
+                        <div class="tarjeta-info" onclick="abrirDetalle('${prod.id}')">
+                            <h3>${prod.titulo}</h3>
+                            <p>${prod.descripcion.substring(0, 80)}...</p>
+                            <span class="btn-pedido">Ver Más Detalles</span>
+                        </div>
+                    `;
+                    galeriaContenedor.appendChild(article);
+                }
+            });
+
+            obtenerCategorias().forEach(cat => {
+                const gal = document.getElementById(`galeria-${cat.id}`);
+                const sec = document.getElementById(`section-container-${cat.id}`);
+                if (gal && gal.children.length === 0 && sec) {
+                    sec.style.display = 'none';
+                }
+            });
+            const galSin = document.getElementById('galeria-sin_categoria');
+            const secSin = document.getElementById('section-container-sin_categoria');
+            if (galSin && galSin.children.length === 0 && secSin) {
+                secSin.style.display = 'none';
+            }
+
+            actualizarVisibilidadAdmin();
+        }
+
+        function crearNuevaCategoria() {
+            const nombreCat = prompt("Escribe el nombre de la nueva categoría:");
+            if (!nombreCat || nombreCat.trim() === "") return;
+
+            const idCat = 'cat_' + Date.now();
+            const nuevaCategoria = { id: idCat, titulo: nombreCat.trim() };
+
+            categoriasUsuario.push(nuevaCategoria);
+            localStorage.setItem('categorias_crochet', JSON.stringify(categoriasUsuario));
+            
+            renderizarCatalogo();
+            document.getElementById('categoria').value = idCat;
+            alert(`Categoría "${nombreCat}" añadida con éxito.`);
+        }
+
+        function editarCategoriaSeleccionated() {
+            const select = document.getElementById('categoria');
+            const idCat = select.value;
+            if (!idCat) return;
+
+            let todas = obtenerCategorias();
+            const catTarget = todas.find(c => c.id === idCat);
+            if (!catTarget) return;
+
+            const nuevoNombre = prompt("Introduce el nuevo nombre para la categoría:", catTarget.titulo);
+            if (!nuevoNombre || nuevoNombre.trim() === "") return;
+
+            if (categoriasBaseIniciales.some(c => c.id === idCat)) {
+                if (!categoriasModificadasBase) {
+                    categoriasModificadasBase = JSON.parse(JSON.stringify(categoriasBaseIniciales));
+                }
+                const baseTarget = categoriasModificadasBase.find(c => c.id === idCat);
+                baseTarget.titulo = nuevoNombre.trim();
+                localStorage.setItem('categorias_modificadas_base', JSON.stringify(categoriasModificadasBase));
+            } else {
+                const userTarget = categoriasUsuario.find(c => c.id === idCat);
+                userTarget.titulo = nuevoNombre.trim();
+                localStorage.setItem('categorias_crochet', JSON.stringify(categoriasUsuario));
+            }
+            renderizarCatalogo();
+            alert("Categoría renombrada con éxito.");
+        }
+
+        function eliminarCategoriaSeleccionated() {
+            const select = document.getElementById('categoria');
+            const idCat = select.value;
+            if (!idCat) return;
+
+            if (confirm("¿Estás completamente segura de eliminar esta categoría? Los productos vinculados pasarán a la sección 'Otros Diseños' automáticamente sin perderse.")) {
+                if (categoriasBaseIniciales.some(c => c.id === idCat)) {
+                    categoriasEliminadasBase.push(idCat);
+                    localStorage.setItem('categorias_eliminadas_base', JSON.stringify(categoriasEliminadasBase));
+                } else {
+                    categoriasUsuario = categoriasUsuario.filter(c => c.id !== idCat);
+                    localStorage.setItem('categorias_crochet', JSON.stringify(categoriasUsuario));
+                }
+                renderizarCatalogo();
+                alert("Categoría eliminada.");
+            }
+        }
+
+        function moverCarrusel(btn, direccion, event) {
+            if (event) event.stopPropagation();
+            const container = btn.closest('.tarjeta-img-container');
+            const wrapper = container.querySelector('.tarjeta-img-wrapper');
+            const indicador = container.querySelector('.carrusel-indicador');
+            
+            let indexActual = parseInt(container.getAttribute('data-index'));
+            const total = parseInt(container.getAttribute('data-total'));
+
+            indexActual += direccion;
+            if (indexActual < 0) indexActual = total - 1;
+            if (indexActual >= total) indexActual = 0;
+
+            container.setAttribute('data-index', indexActual);
+            wrapper.style.transform = `translateX(-${indexActual * 100}%)`;
+            if (indicador) indicador.innerText = `${indexActual + 1} / ${total}`;
+        }
+
+        function abrirDetalle(id) {
+            const lista = obtenerListaCompleta();
+            const prod = lista.find(p => p.id === id);
+            if (!prod) return;
+
+            document.getElementById('modal-titulo').innerText = prod.titulo;
+            document.getElementById('modal-descripcion').innerText = prod.descripcion;
+            
+            document.getElementById('modal-lbl-mat').innerText = enunciadosPersonalizados.mat;
+            document.getElementById('modal-lbl-cui').innerText = enunciadosPersonalizados.cui;
+
+            document.getElementById('modal-materiales').innerText = prod.materiales || materialesPorDefecto;
+            document.getElementById('modal-cuidados').innerText = prod.cuidados || cuidadosPorDefecto;
+
+            const mensajeWa = encodeURIComponent(`Hola! Me interesa conocer más sobre la ${prod.titulo.toLowerCase()}`);
+            document.getElementById('modal-btn-whatsapp').href = `https://wa.me/${WHATSAPP_NUMERO}?text=${mensajeWa}`;
+
+            const fotoPrincipal = document.getElementById('modal-foto-principal');
+            fotoPrincipal.src = prod.imagenes[0];
+
+            const contenedorMiniaturas = document.getElementById('modal-miniaturas');
+            contenedorMiniaturas.innerHTML = '';
+
+            prod.imagenes.forEach((imgSrc, index) => {
+                const miniatura = document.createElement('div');
+                miniatura.className = `miniatura ${index === 0 ? 'activa' : ''}`;
+                miniatura.innerHTML = `<img src="${imgSrc}">`;
+                
+                miniatura.addEventListener('click', () => {
+                    document.querySelectorAll('.miniatura').forEach(m => m.classList.remove('activa'));
+                    miniatura.classList.add('activa');
+                    fotoPrincipal.src = imgSrc;
+                });
+                contenedorMiniaturas.appendChild(miniatura);
+            });
+
+            document.getElementById('vista-producto-modal').style.display = 'flex';
+        }
+
+        function cerrarDetalle() { document.getElementById('vista-producto-modal').style.display = 'none'; }
+        function cerrarModalAfuera(e) { if (e.target.id === 'vista-producto-modal') cerrarDetalle(); }
+
+        document.getElementById('form-producto').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const idEditando = document.getElementById('editando-id').value;
+            const categoria = document.getElementById('categoria').value;
+            const titulo = document.getElementById('titulo').value;
+            const descripcion = document.getElementById('descripcion').value;
+            const materiales = document.getElementById('materiales').value;
+            const cuidados = document.getElementById('cuidados').value;
+            const files = document.getElementById('imagenFile').files;
+
+            const procesarGuardado = (imagenesArray) => {
+                if (idEditando) {
+                    if (idEditando.startsWith('b')) {
+                        modificadosBase = modificadosBase.filter(m => m.id !== idEditando);
+                        modificadosBase.push({ id: idEditando, categoria, titulo, descripcion, materiales, cuidados, imagenes: imagenesArray });
+                        localStorage.setItem('productos_modificados_base', JSON.stringify(modificadosBase));
+                    } else {
+                        productosUsuario = productosUsuario.map(p => p.id === idEditando ? { id: idEditando, categoria, titulo, descripcion, materiales, cuidados, imagenes: imagenesArray } : p);
+                        localStorage.setItem('productos_crochet', JSON.stringify(productosUsuario));
+                    }
+                    finalizarFormulario('¡Publicación actualizada con éxito!');
+                } else {
+                    const nuevoProducto = { id: 'prod_' + Date.now(), categoria, titulo, descripcion, materiales, cuidados, imagenes: imagenesArray };
+                    productosUsuario.push(nuevoProducto);
+                    localStorage.setItem('productos_crochet', JSON.stringify(productosUsuario));
+                    finalizarFormulario('¡Nueva publicación añadida!');
+                }
+            };
+
+            if (files.length > 0) {
+                const promesasLectura = Array.from(files).map(file => {
+                    return new Promise((resolve) => {
+                        const reader = new FileReader();
+                        reader.onloadend = () => resolve(reader.result);
+                        reader.readAsDataURL(file);
+                    });
+                });
+                Promise.all(promesasLectura).then(imagenesCargadas => { procesarGuardado(imagenesCargadas); });
+            } else {
+                if (idEditando) {
+                    const listaCompleta = obtenerListaCompleta();
+                    const prodActual = listaCompleta.find(p => p.id === idEditando);
+                    procesarGuardado(prodActual.imagenes);
+                } else {
+                    alert('Por favor selecciona al menos una foto para publicar el producto.');
+                }
+            }
+        });
+
+        function prepararEdicion(id, event) {
+            if (event) event.stopPropagation();
+            const lista = obtenerListaCompleta();
+            const prod = lista.find(p => p.id === id);
+
+            if (prod) {
+                document.getElementById('editando-id').value = prod.id;
+                document.getElementById('categoria').value = prod.categoria;
+                document.getElementById('titulo').value = prod.titulo;
+                document.getElementById('descripcion').value = prod.descripcion;
+                document.getElementById('materiales').value = prod.materiales || "";
+                document.getElementById('cuidados').value = prod.cuidados || "";
+                
+                document.getElementById('form-titulo-panel').innerText = "✏️ Editando Publicación";
+                document.getElementById('btn-submit-form').innerText = "Guardar Cambios";
+                document.getElementById('btn-cancelar-edit').style.display = "block";
+                document.getElementById('editando-aviso-img').style.display = "block";
+                document.querySelector('.admin-panel').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function cancelarEdicion() {
+            document.getElementById('form-producto').reset();
+            document.getElementById('editando-id').value = "";
+            document.getElementById('form-titulo-panel').innerText = "Añadir Nueva Publicación al Catálogo";
+            document.getElementById('btn-cancelar-edit').style.display = "none";
+            document.getElementById('editando-aviso-img').style.display = "none";
+        }
+
+        function finalizarFormulario(mensaje) { cancelarEdicion(); renderizarCatalogo(); alert(mensaje); }
+
+        function eliminarProducto(id, event) {
+            if (event) event.stopPropagation();
+            if(confirm('¿Seguro que deseas eliminar esta publicación del catálogo?')) {
+                if (id.startsWith('b')) {
+                    eliminadosBase.push(id);
+                    localStorage.setItem('productos_eliminados_base', JSON.stringify(eliminadosBase));
+                } else {
+                    productosUsuario = productosUsuario.filter(p => p.id !== id);
+                    localStorage.setItem('productos_crochet', JSON.stringify(productosUsuario));
+                }
+                if (document.getElementById('editando-id').value === id) cancelarEdicion();
+                renderizarCatalogo();
+            }
+        }
+
+        function toggleModoAdmin() {
+            const adminBlock = document.querySelector('.admin-panel');
+            if (panelAdminVisible) {
+                adminBlock.style.display = 'none';
+                modoAdminActive = false; panelAdminVisible = false;
+            } else {
+                if (prompt("Introduce la contraseña de administrador:") === "(Pr@V8911.)") { 
+                    adminBlock.style.display = 'block';
+                    modoAdminActive = true; panelAdminVisible = true;
+                    adminBlock.scrollIntoView({ behavior: 'smooth' });
+                } else { alert("Contraseña incorrecta."); }
+            }
+            actualizarVisibilidadAdmin();
+        }
+
+        function actualizarVisibilidadAdmin() {
+            const contenedoresAcciones = document.querySelectorAll('.admin-acciones');
+            contenedoresAcciones.forEach(container => {
+                container.style.display = modoAdminActive ? 'flex' : 'none';
+            });
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.key.toLowerCase() === 'm') { event.preventDefault(); toggleModoAdmin(); }
+        });
+
+        // INICIALIZACIÓN COMPLETA AL CARGAR LA WEB
+        loadDesignInputs();
+        renderizarCatalogo();
+    </script>
+</body>
+</html>
